@@ -23,6 +23,20 @@
 
 <script>
     let table = new DataTable('#myTable', {
-    // options
+    responsive: true
+    fixedHeader: true
+    colReorder: true
+    fixedColumns: true
+    layout: {
+        topStart: {
+            buttons: [
+                {
+                    extend: 'collection',
+                    text: 'Export',
+                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                }
+            ]
+        }
+    }
 });
 </script>
